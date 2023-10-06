@@ -23,7 +23,16 @@ body {
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
-    /* animation: cubeRotate 10s linear infinite; */
+    animation: moveFigure 6s ease-in-out infinite alternate;
+}
+
+@keyframes moveFigure {
+    from {
+        transform: rotateY(-15deg) translateX(-50px);
+    }
+    to {
+        transform: rotateY(55deg) translateX(50px);
+    }
 }
 
 .side {
