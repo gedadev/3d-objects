@@ -44,12 +44,14 @@ body {
     background-color: rgb(60, 60, 189);
     height: 50px;
     transform: rotateX(90deg) rotateZ(45deg) translateZ(100px);
+    animation: moveTop 1s ease-in-out infinite alternate;
 }
 
 .left {
     background-color: rgb(101, 101, 214);
     height: 200px;
     transform: rotateY(135deg) translateZ(-25px);
+    animation: modHeight 1s ease-in-out infinite alternate;
 }
 
 
@@ -57,4 +59,23 @@ body {
     background-color: rgb(138, 138, 238);
     height: 200px;
     transform: rotateY(45deg) translateZ(25px);
+    animation: modHeight 1s ease-in-out infinite alternate;
+}
+
+@keyframes modHeight {
+    from {
+        height: 200px;
+    }
+    to {
+        height: 50px;
+    }
+}
+
+@keyframes moveTop {
+    from {
+        transform: rotateX(90deg) rotateZ(45deg) translateZ(100px);
+    }
+    to {
+        transform: rotateX(90deg) rotateZ(45deg) translateZ(25px);
+    }
 }
